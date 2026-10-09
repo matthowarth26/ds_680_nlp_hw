@@ -1,5 +1,6 @@
 # Python virtual environment
 .venv/
+.venv_backup/
 venv/
 
 # Python cache
@@ -15,3 +16,6 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Local datasets
+data/
