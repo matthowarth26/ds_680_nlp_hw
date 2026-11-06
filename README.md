@@ -32,9 +32,9 @@ Topics:
 - Confusion matrices and model comparison
 - Overfitting and model checkpointing
 
-### Module 7 - Part-of-Speech Tagging and Named Entity Recognition
+### Module 10 - Part-of-Speech Tagging and Named Entity Recognition
 
-**Notebook:** `M7_POS_NER.ipynb` *(suggested filename; update to match the actual notebook)*
+**Notebook:** `M10_Sequence_Labeling_POS_NER.ipynb`
 
 Topics:
 - Word tokenization and part-of-speech (POS) tagging with NLTK
