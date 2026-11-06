@@ -32,6 +32,20 @@ Topics:
 - Confusion matrices and model comparison
 - Overfitting and model checkpointing
 
+### Module 7 - Part-of-Speech Tagging and Named Entity Recognition
+
+**Notebook:** `M7_POS_NER.ipynb` *(suggested filename; update to match the actual notebook)*
+
+Topics:
+- Word tokenization and part-of-speech (POS) tagging with NLTK
+- Penn Treebank POS tags and grammatical classification
+- Named entity recognition (NER) with spaCy
+- Entity labels such as PERSON, ORG, GPE, and DATE
+- Evaluating incorrect tags, entity classifications, and missed entities
+- Comparing model predictions with the meaning of words and entities in context
+
+The assignment uses a fictional Star Wars paragraph for POS tagging and a news excerpt about Anthropic for NER.
+
 ## Environment Setup
 
 The assignments were developed using Python 3.12, VS Code, and WSL Ubuntu.
@@ -78,6 +92,24 @@ python -m pip install pandas numpy matplotlib scikit-learn torch ipykernel
 
 PyTorch can run on the CPU, so a compatible NVIDIA GPU is not required.
 
+**Module 10: POS Tagging and Named Entity Recognition**
+
+```bash
+python -m pip install nltk spacy ipykernel
+python -m spacy download en_core_web_sm
+```
+
+The POS tagging notebook also requires the following NLTK resources (if not already downloaded for Module 2):
+
+```python
+import nltk
+
+nltk.download("punkt_tab")
+nltk.download("averaged_perceptron_tagger_eng")
+```
+
+The spaCy model `en_core_web_sm` is downloaded separately from the `spacy` Python package. It is loaded in the notebook with `spacy.load("en_core_web_sm")`.
+
 ### 4. Run the Notebooks
 
 Open the repository in VS Code:
@@ -88,7 +120,7 @@ code .
 
 Select the Python kernel associated with `.venv/bin/python` and open the notebook for the corresponding assignment.
 
-For Module 6, download the IMDb movie review dataset (https://www.geeksforgeeks.org/nlp/dataset-for-sentiment-analysis/) and save it as:
+For Module 6, download the IMDb movie review dataset ([source](https://www.geeksforgeeks.org/nlp/dataset-for-sentiment-analysis/)) and save it as:
 
 `data/IMDB-Dataset.csv`
 
@@ -101,3 +133,4 @@ Run the notebook cells sequentially to reproduce the preprocessing, training, an
 - Each assignment is maintained in a separate Jupyter notebook.
 - Datasets are excluded from GitHub and must be downloaded separately.
 - Virtual environments and temporary Python files are excluded from version control.
+- NLTK resources and the spaCy English model are installed locally and are not committed to the repository.
